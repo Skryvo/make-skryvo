@@ -8,3 +8,4 @@
 - Actions: write a post, design a picture, schedule, update and cancel a post, plan, write, get and publish an
   article, write an email, write a product listing, get the balance.
 - Searches: list scheduled posts, channels and brands; search content. Make an API call for any other route.
+- Deliveries to Watch events are not signature-checked: Make's webhook sees only the parsed body (see README).

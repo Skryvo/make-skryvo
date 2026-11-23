@@ -94,7 +94,7 @@ test("the events webhook subscribes and unsubscribes through the webhook routes"
   assert.equal(attach.response.data.externalHookId, "{{body.id}}");
   assert.equal(detach.url, "/webhooks/{{webhook.externalHookId}}");
   const events = read("webhooks/skryvoEvents/parameters.json")[0].options.map((o) => o.value);
-  assert.deepEqual(events.sort(), Object.keys(spec.webhooks).sort());
+  assert.deepEqual(events.sort(), [...spec.components.schemas.NewWebhookRequest.properties.events.items.enum].sort());
 });
 
 test("drafting schedules nothing, and scheduling is its own module", () => {

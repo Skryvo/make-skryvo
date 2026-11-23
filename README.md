@@ -53,15 +53,22 @@ Write a post never publishes. Schedule a post publishes exactly the text it is g
 | `watchEvents` | Instant trigger | Watch events | Triggers when a post is published or fails, an article is ready or fails, or a post's results come in. |
 | `makeApiCall` | Universal | Make an API call | Performs an authorized call to any route of Skryvo's agent API. |
 
-Dropdowns for brands, channels, blogs and platforms come from four RPCs (`app/rpcs/`). Writing with pictures,
-designing a picture and planning an article take Skryvo about a minute, so the app raises Make's request timeout
-to its 300-second limit (`app/common.json`). An article takes about four minutes to write: Write an article
+Dropdowns for brands, channels, blogs and platforms come from four RPCs (`app/rpcs/`). The app raises Make's
+request timeout to its 300-second limit (`app/common.json`). An article takes about four minutes to write: Write an article
 starts it, and Watch events (Article ready) or Get an article picks up the result.
 
 Watch events subscribes its own endpoint in Skryvo when a scenario turns on and removes it when it turns off. Each
-event arrives as Skryvo sends it: `{id, type, created, test, data}`. Skryvo signs every delivery, but Make hands
-the app the parsed body rather than the raw bytes, so this app does not check the signature; the address Make
-creates for each webhook is private to the scenario.
+event arrives as Skryvo sends it: `{id, type, created, test, data}`.
+
+**Signatures are not checked in Make.** Skryvo signs every delivery (`Skryvo-Signature`), but Make's custom-app docs
+offer no supported way to verify a signature in a webhook: the webhook sees only the parsed `body`, with no raw-body
+variable, so the exact bytes that were signed are not available. This app therefore does not verify deliveries.
+The address Make creates for each webhook is private to its scenario: keep it out of shared screenshots and logs,
+and turn the scenario off and on again to get a new one if it leaks.
+
+The long calls (writing posts, designing a picture, planning an article) answer in the same module: Make allows a
+request up to 300 seconds and they take about a minute, so this app waits for them rather than using Skryvo's
+call-back jobs.
 
 ## Errors
 
