@@ -4,6 +4,9 @@ These steps load `app/` into Make's web app builder on the Make organisation (us
 Make to review it for its public app list. Every value to paste is a file in this repository; paste each file's
 whole content into the tab named.
 
+Once the app exists (step 1.1–1.2), `scripts/load.mjs` does steps 1.3 to 5 and the module visibility of step 7.2
+through Make's API (README › Load into Make); steps 6 and 7 stay in Make's web app.
+
 ## 1. Create the app
 
 1. Sign in at https://us2.make.com with the Skryvo organisation and open **Custom apps** (left menu), then

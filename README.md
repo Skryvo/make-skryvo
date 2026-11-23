@@ -95,6 +95,23 @@ icon.png                      512 × 512
 npm test   # checks every module against test/openapi.json, Make's naming rules and the webhook wiring
 ```
 
+### Load into Make
+
+`scripts/load.mjs` writes `app/` into an existing custom app through Make's API, so a new version loads with one
+command instead of the pastes in `SUBMIT.md`. It needs a Make API key with the `sdk-apps:read` and
+`sdk-apps:write` scopes, and the app's name as Make shows it (Make adds a suffix, e.g. `skryvo-j39n9s`):
+
+```bash
+MAKE_API_KEY=… MAKE_ZONE=us2.make.com npm run load -- skryvo-j39n9s 1          # load, then read back and diff
+MAKE_API_KEY=… MAKE_ZONE=us2.make.com npm run load -- skryvo-j39n9s 1 --check  # read back and diff only
+```
+
+It sets the app's base, common data and icon; finds or creates the connection and webhook by label (Make names
+them, and the script links components to those names, not the ones in `app.json`); creates the RPCs and modules
+that are missing; writes every section that differs; switches each module's visibility on; sets the groups; then
+reads everything back and exits non-zero on any difference. Running it again changes nothing. It never publishes
+the app or requests review, and it cannot change a module's type: delete the module in Make first.
+
 `test/openapi.json` is Skryvo's published API description (`https://api.skryvo.ai/openapi.json`). A test fails when a
 module calls a route it lacks, sends a field its request does not have, or leaves out a required one.
 

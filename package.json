@@ -6,6 +6,7 @@
   "license": "MIT",
   "author": "Flutter Studio LLC <support@skryvo.ai>",
   "scripts": {
-    "test": "node --test test/app.test.mjs"
+    "test": "node --test test/app.test.mjs test/load.test.mjs",
+    "load": "node scripts/load.mjs"
   }
 }
