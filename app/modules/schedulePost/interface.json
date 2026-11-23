@@ -1,57 +1,67 @@
 [
   {
-    "name": "id",
-    "label": "Post ID",
-    "type": "text"
-  },
-  {
-    "name": "platform",
-    "label": "Platform",
-    "type": "text"
-  },
-  {
-    "name": "channel_id",
-    "label": "Channel ID",
-    "type": "text"
-  },
-  {
-    "name": "date",
-    "label": "Date",
-    "type": "text"
-  },
-  {
-    "name": "time",
-    "label": "Time",
-    "type": "text"
-  },
-  {
-    "name": "status",
-    "label": "Status",
-    "type": "text"
-  },
-  {
-    "name": "reason",
-    "label": "Reason",
-    "type": "text"
-  },
-  {
-    "name": "text",
-    "label": "Text",
-    "type": "text"
-  },
-  {
-    "name": "posted_url",
-    "label": "Posted URL",
-    "type": "url"
-  },
-  {
-    "name": "publish_error",
-    "label": "Publish error",
-    "type": "text"
-  },
-  {
-    "name": "open_in_skryvo",
-    "label": "Open in Skryvo",
-    "type": "url"
+    "name": "posts",
+    "label": "Posts",
+    "type": "array",
+    "spec": {
+      "type": "collection",
+      "spec": [
+        {
+          "name": "id",
+          "label": "Post ID",
+          "type": "text"
+        },
+        {
+          "name": "platform",
+          "label": "Platform",
+          "type": "text"
+        },
+        {
+          "name": "channel_id",
+          "label": "Channel ID",
+          "type": "text"
+        },
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "text"
+        },
+        {
+          "name": "time",
+          "label": "Time",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "label": "Status",
+          "type": "text"
+        },
+        {
+          "name": "reason",
+          "label": "Reason",
+          "type": "text"
+        },
+        {
+          "name": "text",
+          "label": "Text",
+          "type": "text"
+        },
+        {
+          "name": "posted_url",
+          "label": "Posted URL",
+          "type": "url"
+        },
+        {
+          "name": "publish_error",
+          "label": "Publish error",
+          "type": "text"
+        },
+        {
+          "name": "open_in_skryvo",
+          "label": "Open in Skryvo",
+          "type": "url"
+        }
+      ]
+    }
   }
 ]
