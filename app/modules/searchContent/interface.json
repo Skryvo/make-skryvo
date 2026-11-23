@@ -1,7 +1,7 @@
 [
   {
     "name": "id",
-    "label": "ID",
+    "label": "Content ID",
     "type": "text"
   },
   {
@@ -12,6 +12,11 @@
   {
     "name": "title",
     "label": "Title",
+    "type": "text"
+  },
+  {
+    "name": "brand_id",
+    "label": "Brand ID",
     "type": "text"
   },
   {

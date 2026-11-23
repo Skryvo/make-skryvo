@@ -34,31 +34,33 @@ Write a post never publishes. Schedule a post publishes exactly the text it is g
 
 | Name | Type | Label | What it does |
 |---|---|---|---|
+| `watchEvents` | Instant trigger | Watch events | Triggers when a post is published or fails, an article is ready or fails, or a post's results come in. |
+| `listPosts` | Search | List scheduled posts | Returns scheduled and recent posts with their status. |
 | `writePost` | Action | Write a post | Drafts a post per platform in the brand's voice. Schedules nothing. |
 | `designPicture` | Action | Design a picture | Designs one picture for a post in the brand's kept look, sized for each platform. Uses image credits. |
-| `schedulePost` | Action | Schedule a post | Schedules approved text to connected channels. Use it only after the person approved the words. |
+| `schedulePost` | Action | Schedule a post | Schedules a post's text to one or more connected social channels. |
 | `updatePost` | Action | Update a post | Moves a post that has not gone out to a new time, changes its words, or both. |
-| `cancelPost` | Action | Cancel a post | Cancels a scheduled post before it goes out. |
-| `listPosts` | Search | List scheduled posts | Returns scheduled and recent posts with their status. |
-| `planArticle` | Action | Plan an article | Plans an article for free: headline, outline, search phrase and the questions only the person can answer. |
-| `writeArticle` | Action | Write an article | Starts writing a planned article (2 generations). Watch events with Article ready, or Get an article, for the result. |
+| `cancelPost` | Action | Cancel a post | Cancels a scheduled post before it is published. |
 | `getArticle` | Action | Get an article | Returns an article's status: writing with its stage, done with its text and checked claims, or failed. |
+| `planArticle` | Action | Plan an article | Creates an article plan with a headline, outline, search phrase and questions for you to answer. |
+| `writeArticle` | Action | Write an article | Starts writing an article from a plan, using two generations. Use Watch events (Article ready) or Get an article for the result. |
 | `publishArticle` | Action | Publish an article | Schedules a finished article to a connected blog, or sends it there now as a draft to review. |
+| `searchContent` | Search | Search content | Returns earlier articles, posts, emails, listings or ads, newest first. |
 | `writeEmail` | Action | Write an email | Writes subject lines, a preheader, the body and a call to action in the brand's voice. Nothing is sent. |
 | `writeListing` | Action | Write a product listing | Writes a title, description and feature bullets for a marketplace from one to ten features. |
-| `getBalance` | Action | Get the balance | Returns the generations, image credits and article plans left this month. |
-| `listChannels` | Search | List channels | Returns the connected channels and what each one takes. |
 | `listBrands` | Search | List brands | Returns the brands this key can use. |
-| `searchContent` | Search | Search content | Returns earlier articles, posts, emails, listings or ads, newest first. |
-| `watchEvents` | Instant trigger | Watch events | Triggers when a post is published or fails, an article is ready or fails, or a post's results come in. |
-| `makeApiCall` | Universal | Make an API call | Performs an authorized call to any route of Skryvo's agent API. |
+| `listChannels` | Search | List channels | Returns the connected channels and what each one takes. |
+| `getBalance` | Action | Get the balance | Returns the generations, image credits and article plans left this month. |
+| `makeApiCall` | Universal | Make an API call | Performs an arbitrary authorized API call. |
 
-Dropdowns for brands, channels, blogs and platforms come from four RPCs (`app/rpcs/`). The app raises Make's
+Dropdowns for brands, channels, blogs, platforms, posts and articles come from six RPCs (`app/rpcs/`); the post and
+article pickers open in map mode, so an ID from an earlier module can be mapped instead. The app raises Make's
 request timeout to its 300-second limit (`app/common.json`). An article takes about four minutes to write: Write an article
 starts it, and Watch events (Article ready) or Get an article picks up the result.
 
 Watch events subscribes its own endpoint in Skryvo when a scenario turns on and removes it when it turns off. Each
-event arrives as Skryvo sends it: `{id, type, created, test, data}`.
+event arrives as Skryvo sends it, `{id, type, created, test, data}`, with `created` parsed as a date. The endpoint's
+signing secret, which Skryvo returns once when the endpoint is created, is sanitised out of Make's logs.
 
 **Signatures are not checked in Make.** Skryvo signs every delivery (`Skryvo-Signature`), but Make's custom-app docs
 offer no supported way to verify a signature in a webhook: the webhook sees only the parsed `body`, with no raw-body
@@ -72,9 +74,11 @@ call-back jobs.
 
 ## Errors
 
-A refusal fails the module with Skryvo's own sentence, for example "That time has passed. Pick a time in the
-future." A revoked key fails the connection. More than 60 requests a minute or 1000 an hour for a key is a rate
-limit error, which Make can retry.
+Every error reads `[status] message`. A refusal (422) fails the module with Skryvo's own sentence, for example
+"[422] That time has passed. Pick a time in the future."; a field that fails validation adds each field's message.
+A revoked key (401) fails the connection. A 403 means the key holder's team role does not allow that one call, so
+it is a data error and the scenario stays on. More than 60 requests a minute or 1000 an hour for a key is a rate
+limit error, which Make can retry, and Make retries server errors (5xx) as connection errors.
 
 ## Layout
 

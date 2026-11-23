@@ -3,6 +3,7 @@
     "name": "article_id",
     "type": "text",
     "label": "Article ID",
-    "required": true
+    "required": true,
+    "help": "The Article ID returned by Write an article."
   }
 ]

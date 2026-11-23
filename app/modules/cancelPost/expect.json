@@ -1,8 +1,11 @@
 [
   {
     "name": "post_id",
-    "type": "text",
+    "type": "select",
     "label": "Post ID",
-    "required": true
+    "required": true,
+    "options": "rpc://listPosts",
+    "mode": "edit",
+    "help": "The post to cancel. Posts that have already gone out are not listed."
   }
 ]

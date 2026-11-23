@@ -4,14 +4,13 @@
     "label": "Days ahead",
     "type": "uinteger",
     "default": 30,
-    "help": "1 to 90."
+    "help": "Number of days ahead to include, from 1 to 90."
   },
   {
     "name": "limit",
     "label": "Limit",
     "type": "uinteger",
-    "default": 50,
-    "required": true,
-    "help": "The most posts to return."
+    "default": 10,
+    "help": "Maximum number of results to return and work with during one execution cycle."
   }
 ]

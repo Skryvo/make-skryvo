@@ -1,3 +1,6 @@
 {
-  "output": "{{body}}"
+  "output": {
+    "{{...}}": "{{omit(body; \"created\")}}",
+    "created": "{{parseDate(body.created; \"YYYY-MM-DDTHH:mm:ssZ\")}}"
+  }
 }

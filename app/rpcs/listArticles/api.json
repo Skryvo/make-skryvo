@@ -1,0 +1,16 @@
+{
+  "url": "/content",
+  "method": "GET",
+  "qs": {
+    "kind": "article",
+    "limit": 50
+  },
+  "response": {
+    "limit": 500,
+    "iterate": "{{body.items}}",
+    "output": {
+      "label": "{{ifempty(item.title; item.id)}}",
+      "value": "{{item.id}}"
+    }
+  }
+}

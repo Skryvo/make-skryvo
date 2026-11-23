@@ -4,7 +4,7 @@
     "type": "text",
     "label": "Plan ID",
     "required": true,
-    "help": "From Plan an article."
+    "help": "The Plan ID returned by Plan an article."
   },
   {
     "name": "answers",
@@ -24,34 +24,38 @@
         "required": true
       }
     ],
-    "help": "The person's answers to the plan's questions, up to three."
+    "help": "Your answers to the plan's questions, up to three."
   },
   {
     "name": "headline",
     "type": "text",
-    "label": "Headline"
+    "label": "Headline",
+    "help": "A headline to use instead of the plan's."
   },
   {
     "name": "notes",
     "type": "text",
     "label": "Notes",
-    "multiline": true
+    "multiline": true,
+    "help": "Anything else the writer should know."
   },
   {
     "name": "pictures",
     "label": "Cover picture",
-    "type": "boolean"
+    "type": "boolean",
+    "help": "Designs a cover picture for the article, using image credits."
   },
   {
     "name": "inside_pictures",
     "label": "Inside pictures",
     "type": "uinteger",
-    "help": "0 to 3."
+    "help": "Number of pictures to place inside the article, from 0 to 3."
   },
   {
     "name": "tone",
     "type": "text",
-    "label": "Tone"
+    "label": "Tone",
+    "help": "For example friendly or professional. Left empty, the plan's tone."
   },
   {
     "name": "audience",

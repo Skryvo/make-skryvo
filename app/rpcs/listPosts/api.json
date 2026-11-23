@@ -1,0 +1,18 @@
+{
+  "url": "/posts",
+  "method": "GET",
+  "qs": {
+    "days": 90
+  },
+  "response": {
+    "limit": 500,
+    "iterate": {
+      "container": "{{body.posts}}",
+      "condition": "{{item.status != \"posted\" & item.status != \"going_out\"}}"
+    },
+    "output": {
+      "label": "{{item.date}} {{item.time}} · {{item.platform}}: {{substring(ifempty(item.text; ifempty(item.topic; \"\")); 0; 60)}}",
+      "value": "{{item.id}}"
+    }
+  }
+}

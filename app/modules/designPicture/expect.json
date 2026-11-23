@@ -4,7 +4,7 @@
     "type": "text",
     "label": "Text",
     "required": true,
-    "help": "The post's text; the picture carries its opening line.",
+    "help": "The post's text. The picture shows its opening line.",
     "multiline": true
   },
   {
@@ -13,25 +13,26 @@
     "label": "Platforms",
     "multiple": true,
     "options": "rpc://listPlatforms",
-    "required": true
+    "required": true,
+    "help": "One picture is sized for each platform."
   },
   {
     "name": "brand_id",
     "type": "select",
     "label": "Brand",
     "options": "rpc://listBrands",
-    "help": "The brand to write as. Left empty, the account's default brand."
+    "help": "The brand whose voice to use. Left empty, Skryvo uses the account's default brand."
   },
   {
     "name": "headline",
     "type": "text",
     "label": "Headline",
-    "help": "Up to nine words on the picture, in place of the opening line."
+    "help": "Up to nine words to show on the picture instead of the opening line."
   },
   {
     "name": "direction",
     "type": "text",
     "label": "Direction",
-    "help": "closer, bolder, calmer, or the person's own words."
+    "help": "How to change the brand's look for this picture: closer, bolder, calmer, or your own words."
   }
 ]

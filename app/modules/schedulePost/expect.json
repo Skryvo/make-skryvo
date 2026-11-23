@@ -4,7 +4,7 @@
     "type": "text",
     "label": "Text",
     "required": true,
-    "help": "The exact words the person approved.",
+    "help": "The text to publish, exactly as it will appear.",
     "multiline": true
   },
   {
@@ -13,19 +13,20 @@
     "label": "Channels",
     "multiple": true,
     "required": true,
-    "options": "rpc://listSocialChannels"
+    "options": "rpc://listSocialChannels",
+    "help": "The connected social channels to publish to."
   },
   {
     "name": "at",
     "label": "Publish at",
     "type": "date",
-    "help": "Moves to the next quarter hour. Left empty, the post goes out in about five minutes."
+    "help": "When to publish the post. Skryvo moves it to the next quarter hour. Left empty, the post goes out in about five minutes."
   },
   {
     "name": "image_url",
     "label": "Image URL",
     "type": "url",
-    "help": "One picture for every channel."
+    "help": "A picture to publish with the post on every channel."
   },
   {
     "name": "link",
@@ -38,7 +39,7 @@
     "type": "select",
     "label": "Brand",
     "options": "rpc://listBrands",
-    "help": "The brand to write as. Left empty, the account's default brand."
+    "help": "The brand whose voice to use. Left empty, Skryvo uses the account's default brand."
   },
   {
     "name": "tiktok",
@@ -69,6 +70,6 @@
         ]
       }
     ],
-    "help": "Required for a TikTok channel; TikTok asks the person to choose for every post."
+    "help": "Required for a TikTok channel: TikTok needs the audience chosen for every post."
   }
 ]

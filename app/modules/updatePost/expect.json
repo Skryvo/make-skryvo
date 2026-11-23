@@ -1,19 +1,24 @@
 [
   {
     "name": "post_id",
-    "type": "text",
+    "type": "select",
     "label": "Post ID",
-    "required": true
+    "required": true,
+    "options": "rpc://listPosts",
+    "mode": "edit",
+    "help": "The post to change. Posts that have already gone out are not listed."
   },
   {
     "name": "at",
     "label": "New time",
-    "type": "date"
+    "type": "date",
+    "help": "The new time to publish the post. Skryvo moves it to the next quarter hour."
   },
   {
     "name": "text",
     "type": "text",
     "label": "New text",
-    "multiline": true
+    "multiline": true,
+    "help": "The new text of the post. Left empty, the text stays as it is."
   }
 ]

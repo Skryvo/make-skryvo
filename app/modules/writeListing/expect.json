@@ -3,7 +3,8 @@
     "name": "product",
     "type": "text",
     "label": "Product",
-    "required": true
+    "required": true,
+    "help": "The product's name."
   },
   {
     "name": "features",
@@ -13,7 +14,8 @@
     "spec": {
       "type": "text",
       "label": "Feature"
-    }
+    },
+    "help": "From one to ten features, one per item."
   },
   {
     "name": "marketplace",
@@ -68,7 +70,7 @@
     "type": "select",
     "label": "Brand",
     "options": "rpc://listBrands",
-    "help": "The brand to write as. Left empty, the account's default brand."
+    "help": "The brand whose voice to use. Left empty, Skryvo uses the account's default brand."
   },
   {
     "name": "tone",
@@ -83,22 +85,30 @@
   {
     "name": "language",
     "type": "text",
-    "label": "Language"
+    "label": "Language",
+    "help": "A language code such as en or de."
   },
   {
     "name": "overview",
     "type": "text",
     "label": "Overview",
-    "multiline": true
+    "multiline": true,
+    "help": "Anything else the listing should say about the product."
   },
   {
     "name": "price",
     "label": "Price",
-    "type": "number"
+    "type": "number",
+    "help": "The product's price, shown in the listing."
   },
   {
     "name": "keywords",
-    "type": "text",
-    "label": "Keywords"
+    "label": "Keywords",
+    "type": "array",
+    "spec": {
+      "type": "text",
+      "label": "Keyword"
+    },
+    "help": "Search terms buyers use for this product."
   }
 ]

@@ -24,14 +24,14 @@
         "label": "Post",
         "value": "post"
       }
-    ]
+    ],
+    "help": "The kind of content to return. Left empty, every kind."
   },
   {
     "name": "limit",
     "label": "Limit",
     "type": "uinteger",
-    "default": 20,
-    "required": true,
-    "help": "Up to 50."
+    "default": 10,
+    "help": "Maximum number of results to return and work with during one execution cycle."
   }
 ]

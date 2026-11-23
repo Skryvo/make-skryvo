@@ -1,44 +1,44 @@
 [
   {
+    "label": "Events",
+    "modules": [
+      "watchEvents"
+    ]
+  },
+  {
     "label": "Posts",
     "modules": [
+      "listPosts",
       "writePost",
       "designPicture",
       "schedulePost",
       "updatePost",
-      "cancelPost",
-      "listPosts"
+      "cancelPost"
     ]
   },
   {
     "label": "Articles",
     "modules": [
+      "getArticle",
       "planArticle",
       "writeArticle",
-      "getArticle",
       "publishArticle"
     ]
   },
   {
     "label": "Writing",
     "modules": [
+      "searchContent",
       "writeEmail",
-      "writeListing",
-      "searchContent"
+      "writeListing"
     ]
   },
   {
     "label": "Account",
     "modules": [
-      "getBalance",
+      "listBrands",
       "listChannels",
-      "listBrands"
-    ]
-  },
-  {
-    "label": "Events",
-    "modules": [
-      "watchEvents"
+      "getBalance"
     ]
   },
   {

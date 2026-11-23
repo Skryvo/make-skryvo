@@ -154,13 +154,13 @@ async function main() {
     if (have && have.typeId !== m.typeId) differences.push(`module ${m.name}: typeId ${have.typeId} ≠ ${m.typeId} (Make cannot change a module's type; delete it first)`);
     if (!have && !checkOnly) {
       const link = linkFor(m, names);
-      const body = { name: m.name, typeId: m.typeId, label: m.label, description: m.description, moduleInitMode: "blank" };
+      const body = { name: m.name, typeId: m.typeId, label: m.label, description: m.description, crud: m.crud ?? null, moduleInitMode: "blank" };
       if (link.webhook) body.webhook = link.webhook;
       await call("POST", `/sdk/apps/${app}/${version}/modules`, { body });
       have = {};
     }
     if (!have) continue;
-    const want = { label: m.label, description: m.description, ...linkFor(m, names) };
+    const want = { label: m.label, description: m.description, crud: m.crud ?? null, ...linkFor(m, names) };
     if (!want.webhook) delete want.webhook;
     const patch = Object.fromEntries(Object.entries(want).filter(([k, v]) => have[k] !== v));
     if (Object.keys(patch).length && !checkOnly) await call("PATCH", `/sdk/apps/${app}/${version}/modules/${m.name}`, { body: patch });
@@ -199,7 +199,7 @@ async function main() {
     const link = linkFor(m, names);
     const live = link.webhook ? (await call("GET", `/sdk/apps/${app}/${version}/modules/${m.name}`)).appModule : liveModules.get(m.name);
     if (!live) differences.push(`module ${m.name} missing`);
-    else if (live.typeId !== m.typeId || live.label !== m.label || live.description !== m.description || live.connection !== link.connection || (link.webhook && live.webhook !== link.webhook) || !live.public)
+    else if (live.typeId !== m.typeId || live.label !== m.label || live.description !== m.description || (live.crud ?? null) !== (m.crud ?? null) || live.connection !== link.connection || (link.webhook && live.webhook !== link.webhook) || !live.public)
       differences.push(`module ${m.name}: ${JSON.stringify(live)}`);
   }
   const extra = [...liveModules.keys()].filter((n) => !manifest.modules.some((m) => m.name === n));

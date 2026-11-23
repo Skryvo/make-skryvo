@@ -1,34 +1,38 @@
 [
   {
     "name": "article_id",
-    "type": "text",
+    "type": "select",
     "label": "Article ID",
-    "required": true
+    "required": true,
+    "options": "rpc://listArticles",
+    "mode": "edit",
+    "help": "A finished article: the Content ID from Search content, or the Article ID from Write an article."
   },
   {
     "name": "channel_id",
     "type": "select",
     "label": "Blog",
     "required": true,
-    "options": "rpc://listBlogs"
+    "options": "rpc://listBlogs",
+    "help": "A connected blog. Only blogs that are connected and working are listed."
   },
   {
     "name": "as_draft",
     "label": "Send as a draft",
     "type": "boolean",
     "default": true,
-    "help": "Sends it to the blog now as a draft to review there."
+    "help": "Sends the article to the blog now as a draft, to review and publish there."
   },
   {
     "name": "at",
     "label": "Publish at",
     "type": "date",
-    "help": "When not sent as a draft. Left empty, in about five minutes."
+    "help": "When to publish the article if it is not sent as a draft. Left empty, it is published in about five minutes."
   },
   {
     "name": "original_url",
     "label": "Original URL",
     "type": "url",
-    "help": "The article's first home, credited by every copy."
+    "help": "The address where the article was first published. Every copy credits it as the original."
   }
 ]

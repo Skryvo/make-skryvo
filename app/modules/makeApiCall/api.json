@@ -1,7 +1,12 @@
 {
-  "url": "{{parameters.url}}",
+  "url": "https://api.skryvo.ai/api/{{parameters.url}}",
   "method": "{{parameters.method}}",
-  "qs": "{{toCollection(parameters.qs; \"key\"; \"value\")}}",
+  "qs": {
+    "{{...}}": "{{toCollection(parameters.qs; \"key\"; \"value\")}}"
+  },
+  "headers": {
+    "{{...}}": "{{toCollection(parameters.headers; \"key\"; \"value\")}}"
+  },
   "body": "{{parameters.body}}",
   "response": {
     "output": {

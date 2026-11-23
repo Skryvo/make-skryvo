@@ -11,18 +11,19 @@
     "type": "select",
     "label": "Brand",
     "options": "rpc://listBrands",
-    "help": "The brand to write as. Left empty, the account's default brand."
+    "help": "The brand whose voice to use. Left empty, Skryvo uses the account's default brand."
   },
   {
     "name": "length",
     "label": "Length",
     "type": "uinteger",
-    "help": "Words, 100 to 4000."
+    "help": "The article's length in words, from 100 to 4000."
   },
   {
     "name": "tone",
     "type": "text",
-    "label": "Tone"
+    "label": "Tone",
+    "help": "For example friendly or professional. Left empty, the brand's tone."
   },
   {
     "name": "style",
@@ -48,7 +49,8 @@
     "spec": {
       "type": "text",
       "label": "Keyword"
-    }
+    },
+    "help": "Search terms the article should rank for, up to ten."
   },
   {
     "name": "must_cover",
@@ -57,20 +59,22 @@
     "spec": {
       "type": "text",
       "label": "Point"
-    }
+    },
+    "help": "Points the article must cover."
   },
   {
     "name": "only_you",
     "type": "text",
-    "label": "Only you know",
-    "help": "Facts only the person knows, used in their words.",
+    "label": "Your own knowledge",
+    "help": "Facts, experience or examples that only you know. The article uses them in your words.",
     "multiline": true
   },
   {
     "name": "notes",
     "type": "text",
     "label": "Notes",
-    "multiline": true
+    "multiline": true,
+    "help": "Anything else the writer should know."
   },
   {
     "name": "sources",
@@ -80,6 +84,6 @@
       "type": "url",
       "label": "Page"
     },
-    "help": "Up to three public pages to read."
+    "help": "Up to three public web pages for Skryvo to read and draw on."
   }
 ]

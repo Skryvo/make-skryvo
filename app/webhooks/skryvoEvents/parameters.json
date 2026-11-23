@@ -27,6 +27,6 @@
         "value": "results.ready"
       }
     ],
-    "help": "Skryvo sends each of these to this scenario as it happens."
+    "help": "The events that start this scenario. Skryvo sends each one as it happens."
   }
 ]

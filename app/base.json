@@ -7,22 +7,21 @@
   "timeout": "{{common.timeout}}",
   "response": {
     "error": {
-      "message": "[{{statusCode}}] {{ifempty(body.detail; body.message)}}",
-      "type": "RuntimeError",
+      "message": "[{{statusCode}}] {{ifempty(body.detail; body.message)}}{{if(body.details; \": \" + join(map(body.details; \"message\"); \"; \") + \" (\" + join(map(body.details; \"field\"); \", \") + \")\"; \"\")}}",
       "401": {
-        "message": "{{ifempty(body.detail; body.message)}} Create a new key in Skryvo under Settings › API & agents.",
+        "message": "[{{statusCode}}] {{ifempty(body.detail; body.message)}} Create a new key in Skryvo under Settings › API & agents.",
         "type": "InvalidAccessTokenError"
       },
       "403": {
-        "message": "{{ifempty(body.detail; body.message)}}",
-        "type": "InvalidAccessTokenError"
+        "message": "[{{statusCode}}] {{ifempty(body.detail; body.message)}}",
+        "type": "DataError"
       },
       "422": {
-        "message": "{{ifempty(body.detail; body.message)}}",
+        "message": "[{{statusCode}}] {{ifempty(body.detail; body.message)}}{{if(body.details; \": \" + join(map(body.details; \"message\"); \"; \") + \" (\" + join(map(body.details; \"field\"); \", \") + \")\"; \"\")}}",
         "type": "DataError"
       },
       "429": {
-        "message": "{{body.message}}",
+        "message": "[{{statusCode}}] {{ifempty(body.detail; body.message)}}",
         "type": "RateLimitError"
       }
     }

@@ -1,6 +1,9 @@
 {
   "url": "/listings",
   "method": "POST",
-  "body": "{{parameters}}",
+  "body": {
+    "{{...}}": "{{omit(parameters; \"keywords\")}}",
+    "keywords": "{{join(parameters.keywords; \", \")}}"
+  },
   "response": {}
 }

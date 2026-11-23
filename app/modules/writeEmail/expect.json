@@ -48,7 +48,7 @@
     "type": "select",
     "label": "Brand",
     "options": "rpc://listBrands",
-    "help": "The brand to write as. Left empty, the account's default brand."
+    "help": "The brand whose voice to use. Left empty, Skryvo uses the account's default brand."
   },
   {
     "name": "tone",
@@ -58,7 +58,8 @@
   {
     "name": "language",
     "type": "text",
-    "label": "Language"
+    "label": "Language",
+    "help": "A language code such as en or de."
   },
   {
     "name": "audience",
@@ -74,6 +75,6 @@
     "name": "length",
     "label": "Length",
     "type": "uinteger",
-    "help": "Body words, 100 to 1000."
+    "help": "The body's length in words, from 100 to 1000."
   }
 ]

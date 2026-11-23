@@ -13,14 +13,14 @@
     "multiple": true,
     "options": "rpc://listPlatforms",
     "required": true,
-    "help": "Up to four. One post is written for each."
+    "help": "Up to four platforms. One post is written for each."
   },
   {
     "name": "brand_id",
     "type": "select",
     "label": "Brand",
     "options": "rpc://listBrands",
-    "help": "The brand to write as. Left empty, the account's default brand."
+    "help": "The brand whose voice to use. Left empty, Skryvo uses the account's default brand."
   },
   {
     "name": "pictures",
@@ -71,6 +71,6 @@
     "label": "Confirmed",
     "type": "boolean",
     "default": true,
-    "help": "Write now with these settings. Off returns the summary of settings, cost and balance first, writing nothing."
+    "help": "On, the posts are written now. Off, the module returns the settings, cost and balance and writes nothing."
   }
 ]

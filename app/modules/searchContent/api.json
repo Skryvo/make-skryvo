@@ -3,11 +3,14 @@
   "method": "GET",
   "qs": {
     "kind": "{{parameters.kind}}",
-    "limit": "{{parameters.limit}}"
+    "limit": 50
   },
   "response": {
     "iterate": "{{body.items}}",
-    "output": "{{item}}",
+    "output": {
+      "{{...}}": "{{omit(item; \"created_at\")}}",
+      "created_at": "{{parseDate(item.created_at; \"YYYY-MM-DDTHH:mm:ssZ\")}}"
+    },
     "limit": "{{parameters.limit}}"
   }
 }

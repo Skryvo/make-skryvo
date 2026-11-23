@@ -9,5 +9,11 @@
     "data": {
       "externalHookId": "{{body.id}}"
     }
+  },
+  "log": {
+    "sanitize": [
+      "request.headers.authorization",
+      "response.body.secret"
+    ]
   }
 }

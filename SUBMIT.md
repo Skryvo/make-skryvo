@@ -39,33 +39,35 @@ Communication and `parameters.json` as Parameters:
    - `listSocialChannels`, label "List social channels"
    - `listBlogs`, label "List blogs"
    - `listPlatforms`, label "List platforms"
+   - `listPosts`, label "List posts"
+   - `listArticles`, label "List articles"
 
 ## 5. Modules
 
-**Modules › Create a new module** for each row, in this order. Name, Label and Description are in `app/app.json`.
+**Modules › Create a new module** for each row, in this order. Name, Label, Description and Module action are in `app/app.json`.
 Then paste, from `app/modules/<name>/`: Communication `api.json` (the instant trigger has none), Static parameters
 `parameters.json`, Mappable parameters `expect.json`, Interface `interface.json`, Samples `samples.json`.
 
-| # | Name | Type | Label | Link |
-|---|---|---|---|---|
-| 1 | `writePost` | Action | Write a post | connection Skryvo |
-| 2 | `designPicture` | Action | Design a picture | connection Skryvo |
-| 3 | `schedulePost` | Action | Schedule a post | connection Skryvo |
-| 4 | `updatePost` | Action | Update a post | connection Skryvo |
-| 5 | `cancelPost` | Action | Cancel a post | connection Skryvo |
-| 6 | `listPosts` | Search | List scheduled posts | connection Skryvo |
-| 7 | `planArticle` | Action | Plan an article | connection Skryvo |
-| 8 | `writeArticle` | Action | Write an article | connection Skryvo |
-| 9 | `getArticle` | Action | Get an article | connection Skryvo |
-| 10 | `publishArticle` | Action | Publish an article | connection Skryvo |
-| 11 | `writeEmail` | Action | Write an email | connection Skryvo |
-| 12 | `writeListing` | Action | Write a product listing | connection Skryvo |
-| 13 | `getBalance` | Action | Get the balance | connection Skryvo |
-| 14 | `listChannels` | Search | List channels | connection Skryvo |
-| 15 | `listBrands` | Search | List brands | connection Skryvo |
-| 16 | `searchContent` | Search | Search content | connection Skryvo |
-| 17 | `watchEvents` | Instant trigger | Watch events | webhook Skryvo events |
-| 18 | `makeApiCall` | Universal | Make an API call | connection Skryvo |
+| # | Name | Type | Label | Module action | Link |
+|---|---|---|---|---|---|
+| 1 | `watchEvents` | Instant trigger | Watch events |  | webhook Skryvo events |
+| 2 | `listPosts` | Search | List scheduled posts | Read | connection Skryvo |
+| 3 | `writePost` | Action | Write a post | Create | connection Skryvo |
+| 4 | `designPicture` | Action | Design a picture | Create | connection Skryvo |
+| 5 | `schedulePost` | Action | Schedule a post | Create | connection Skryvo |
+| 6 | `updatePost` | Action | Update a post | Update | connection Skryvo |
+| 7 | `cancelPost` | Action | Cancel a post | Delete | connection Skryvo |
+| 8 | `getArticle` | Action | Get an article | Read | connection Skryvo |
+| 9 | `planArticle` | Action | Plan an article | Create | connection Skryvo |
+| 10 | `writeArticle` | Action | Write an article | Create | connection Skryvo |
+| 11 | `publishArticle` | Action | Publish an article | Create | connection Skryvo |
+| 12 | `searchContent` | Search | Search content | Read | connection Skryvo |
+| 13 | `writeEmail` | Action | Write an email | Create | connection Skryvo |
+| 14 | `writeListing` | Action | Write a product listing | Create | connection Skryvo |
+| 15 | `listBrands` | Search | List brands | Read | connection Skryvo |
+| 16 | `listChannels` | Search | List channels | Read | connection Skryvo |
+| 17 | `getBalance` | Action | Get the balance | Read | connection Skryvo |
+| 18 | `makeApiCall` | Universal | Make an API call |  | connection Skryvo |
 
 Then **Modules › Groups**: paste `app/groups.json`.
 
