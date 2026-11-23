@@ -1,0 +1,15 @@
+{
+  "url": "/channels",
+  "method": "GET",
+  "response": {
+    "limit": 500,
+    "iterate": {
+      "container": "{{body.channels}}",
+      "condition": "{{item.kind = \"blog\" & item.needs_reconnect = false}}"
+    },
+    "output": {
+      "label": "{{item.name}} ({{item.platform}})",
+      "value": "{{item.id}}"
+    }
+  }
+}

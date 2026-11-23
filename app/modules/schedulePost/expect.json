@@ -1,0 +1,74 @@
+[
+  {
+    "name": "text",
+    "type": "text",
+    "label": "Text",
+    "required": true,
+    "help": "The exact words the person approved.",
+    "multiline": true
+  },
+  {
+    "name": "channel_ids",
+    "type": "select",
+    "label": "Channels",
+    "multiple": true,
+    "required": true,
+    "options": "rpc://listSocialChannels"
+  },
+  {
+    "name": "at",
+    "label": "Publish at",
+    "type": "date",
+    "help": "Moves to the next quarter hour. Left empty, the post goes out in about five minutes."
+  },
+  {
+    "name": "image_url",
+    "label": "Image URL",
+    "type": "url",
+    "help": "One picture for every channel."
+  },
+  {
+    "name": "link",
+    "label": "Link",
+    "type": "url",
+    "help": "A web page the post points to."
+  },
+  {
+    "name": "brand_id",
+    "type": "select",
+    "label": "Brand",
+    "options": "rpc://listBrands",
+    "help": "The brand to write as. Left empty, the account's default brand."
+  },
+  {
+    "name": "tiktok",
+    "label": "TikTok",
+    "type": "collection",
+    "spec": [
+      {
+        "name": "privacy",
+        "type": "select",
+        "label": "Who can see it",
+        "options": [
+          {
+            "label": "Everyone",
+            "value": "PUBLIC_TO_EVERYONE"
+          },
+          {
+            "label": "Followers",
+            "value": "FOLLOWER_OF_CREATOR"
+          },
+          {
+            "label": "Friends",
+            "value": "MUTUAL_FOLLOW_FRIENDS"
+          },
+          {
+            "label": "Only me",
+            "value": "SELF_ONLY"
+          }
+        ]
+      }
+    ],
+    "help": "Required for a TikTok channel; TikTok asks the person to choose for every post."
+  }
+]

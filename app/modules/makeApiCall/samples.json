@@ -1,0 +1,10 @@
+{
+  "body": {
+    "email": "sam@example.com",
+    "plan": "pro"
+  },
+  "headers": {
+    "content-type": "application/json"
+  },
+  "statusCode": 200
+}

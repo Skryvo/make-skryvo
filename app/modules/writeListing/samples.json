@@ -1,0 +1,20 @@
+{
+  "status": "written",
+  "brand_id": "bv_3c9d0e",
+  "generation_id": "gen_l1st1n",
+  "title": "Northside House Blend, 1 kg whole beans",
+  "listing": {
+    "title": "Northside House Blend, 1 kg whole beans",
+    "description": "A balanced medium roast…",
+    "bullet_points": [
+      "Roasted weekly in Leeds"
+    ]
+  },
+  "settings": [
+    {
+      "field": "platform",
+      "value": "shopify",
+      "from": "you"
+    }
+  ]
+}

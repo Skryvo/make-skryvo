@@ -1,0 +1,76 @@
+[
+  {
+    "name": "topic",
+    "type": "text",
+    "label": "Topic",
+    "required": true,
+    "help": "What the post is about, up to 200 characters: the news, the offer, who it is for."
+  },
+  {
+    "name": "platforms",
+    "type": "select",
+    "label": "Platforms",
+    "multiple": true,
+    "options": "rpc://listPlatforms",
+    "required": true,
+    "help": "Up to four. One post is written for each."
+  },
+  {
+    "name": "brand_id",
+    "type": "select",
+    "label": "Brand",
+    "options": "rpc://listBrands",
+    "help": "The brand to write as. Left empty, the account's default brand."
+  },
+  {
+    "name": "pictures",
+    "label": "Pictures",
+    "type": "boolean",
+    "default": false,
+    "help": "Designs a picture in the brand's kept look with each post, using image credits. Takes about a minute."
+  },
+  {
+    "name": "tone",
+    "type": "text",
+    "label": "Tone",
+    "help": "For example friendly or professional. Left empty, the brand's tone."
+  },
+  {
+    "name": "language",
+    "type": "text",
+    "label": "Language",
+    "help": "A language code such as en or de."
+  },
+  {
+    "name": "audience",
+    "type": "text",
+    "label": "Audience"
+  },
+  {
+    "name": "call_to_action",
+    "type": "text",
+    "label": "Call to action"
+  },
+  {
+    "name": "hashtags",
+    "label": "Hashtags",
+    "type": "array",
+    "spec": {
+      "type": "text",
+      "label": "Hashtag"
+    }
+  },
+  {
+    "name": "link",
+    "label": "Link",
+    "type": "url",
+    "help": "A web page the post points to."
+  },
+  {
+    "name": "confirmed",
+    "label": "Confirmed",
+    "type": "boolean",
+    "default": true,
+    "help": "Write now with these settings. Off returns the summary of settings, cost and balance first, writing nothing."
+  }
+]

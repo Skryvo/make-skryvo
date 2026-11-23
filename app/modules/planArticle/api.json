@@ -1,0 +1,6 @@
+{
+  "url": "/articles/plan",
+  "method": "POST",
+  "body": "{{parameters}}",
+  "response": {}
+}

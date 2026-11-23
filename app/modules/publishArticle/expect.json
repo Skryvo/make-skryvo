@@ -1,0 +1,34 @@
+[
+  {
+    "name": "article_id",
+    "type": "text",
+    "label": "Article ID",
+    "required": true
+  },
+  {
+    "name": "channel_id",
+    "type": "select",
+    "label": "Blog",
+    "required": true,
+    "options": "rpc://listBlogs"
+  },
+  {
+    "name": "as_draft",
+    "label": "Send as a draft",
+    "type": "boolean",
+    "default": true,
+    "help": "Sends it to the blog now as a draft to review there."
+  },
+  {
+    "name": "at",
+    "label": "Publish at",
+    "type": "date",
+    "help": "When not sent as a draft. Left empty, in about five minutes."
+  },
+  {
+    "name": "original_url",
+    "label": "Original URL",
+    "type": "url",
+    "help": "The article's first home, credited by every copy."
+  }
+]

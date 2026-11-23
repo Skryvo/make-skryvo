@@ -1,0 +1,104 @@
+[
+  {
+    "name": "product",
+    "type": "text",
+    "label": "Product",
+    "required": true
+  },
+  {
+    "name": "features",
+    "label": "Features",
+    "type": "array",
+    "required": true,
+    "spec": {
+      "type": "text",
+      "label": "Feature"
+    }
+  },
+  {
+    "name": "marketplace",
+    "type": "select",
+    "label": "Marketplace",
+    "required": true,
+    "options": [
+      {
+        "label": "Amazon",
+        "value": "amazon"
+      },
+      {
+        "label": "eBay",
+        "value": "ebay"
+      },
+      {
+        "label": "Etsy",
+        "value": "etsy"
+      },
+      {
+        "label": "Google Shopping",
+        "value": "google_shopping"
+      },
+      {
+        "label": "Landing page",
+        "value": "landing_page"
+      },
+      {
+        "label": "SaaS",
+        "value": "saas"
+      },
+      {
+        "label": "Shopify",
+        "value": "shopify"
+      },
+      {
+        "label": "TikTok Shop",
+        "value": "tiktok_shop"
+      },
+      {
+        "label": "Walmart",
+        "value": "walmart"
+      },
+      {
+        "label": "WooCommerce",
+        "value": "woocommerce"
+      }
+    ]
+  },
+  {
+    "name": "brand_id",
+    "type": "select",
+    "label": "Brand",
+    "options": "rpc://listBrands",
+    "help": "The brand to write as. Left empty, the account's default brand."
+  },
+  {
+    "name": "tone",
+    "type": "text",
+    "label": "Tone"
+  },
+  {
+    "name": "audience",
+    "type": "text",
+    "label": "Audience"
+  },
+  {
+    "name": "language",
+    "type": "text",
+    "label": "Language"
+  },
+  {
+    "name": "overview",
+    "type": "text",
+    "label": "Overview",
+    "multiline": true
+  },
+  {
+    "name": "price",
+    "label": "Price",
+    "type": "number"
+  },
+  {
+    "name": "keywords",
+    "type": "text",
+    "label": "Keywords"
+  }
+]

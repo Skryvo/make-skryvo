@@ -1,0 +1,18 @@
+{
+  "status": "written",
+  "brand_id": "bv_3c9d0e",
+  "generation_id": "gen_e3a1b2",
+  "subject_lines": [
+    "Our new studio opens Saturday"
+  ],
+  "preheader": "Free tasting from 9am.",
+  "body": "Hi there,\n\nOur new studio opens this Saturday…",
+  "call_to_action": "Get directions",
+  "settings": [
+    {
+      "field": "campaign_type",
+      "value": "announcement",
+      "from": "you"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "url": "/pictures",
+  "method": "POST",
+  "body": "{{parameters}}",
+  "response": {}
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "status",
+    "label": "Status",
+    "type": "text"
+  },
+  {
+    "name": "edit_url",
+    "label": "Edit URL",
+    "type": "url"
+  },
+  {
+    "name": "id",
+    "label": "Scheduled post ID",
+    "type": "text"
+  },
+  {
+    "name": "date",
+    "label": "Date",
+    "type": "text"
+  },
+  {
+    "name": "time",
+    "label": "Time",
+    "type": "text"
+  }
+]

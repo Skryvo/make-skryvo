@@ -1,0 +1,13 @@
+{
+  "url": "/content",
+  "method": "GET",
+  "qs": {
+    "kind": "{{parameters.kind}}",
+    "limit": "{{parameters.limit}}"
+  },
+  "response": {
+    "iterate": "{{body.items}}",
+    "output": "{{item}}",
+    "limit": "{{parameters.limit}}"
+  }
+}

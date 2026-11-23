@@ -1,0 +1,86 @@
+[
+  {
+    "name": "status",
+    "label": "Status",
+    "type": "text"
+  },
+  {
+    "name": "generation_id",
+    "label": "Generation ID",
+    "type": "text"
+  },
+  {
+    "name": "posts",
+    "label": "Posts",
+    "type": "array",
+    "spec": [
+      {
+        "name": "platform",
+        "label": "Platform",
+        "type": "text"
+      },
+      {
+        "name": "text",
+        "label": "Text",
+        "type": "text"
+      },
+      {
+        "name": "hashtags",
+        "label": "Hashtags",
+        "type": "array",
+        "spec": {
+          "type": "text"
+        }
+      },
+      {
+        "name": "error",
+        "label": "Error",
+        "type": "text"
+      },
+      {
+        "name": "picture",
+        "label": "Picture",
+        "type": "collection",
+        "spec": [
+          {
+            "name": "image_url",
+            "label": "Image URL",
+            "type": "url"
+          },
+          {
+            "name": "width",
+            "label": "Width",
+            "type": "uinteger"
+          },
+          {
+            "name": "height",
+            "label": "Height",
+            "type": "uinteger"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "settings",
+    "label": "Settings",
+    "type": "array",
+    "spec": [
+      {
+        "name": "field",
+        "label": "Field",
+        "type": "text"
+      },
+      {
+        "name": "value",
+        "label": "Value",
+        "type": "any"
+      },
+      {
+        "name": "from",
+        "label": "From",
+        "type": "text"
+      }
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "url": "/posts/{{parameters.post_id}}",
+  "method": "PATCH",
+  "body": "{{omit(parameters; \"post_id\")}}",
+  "response": {}
+}

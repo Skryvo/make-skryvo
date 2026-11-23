@@ -1,0 +1,44 @@
+[
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text"
+  },
+  {
+    "name": "pictures",
+    "label": "Pictures",
+    "type": "array",
+    "spec": [
+      {
+        "name": "platform",
+        "label": "Platform",
+        "type": "text"
+      },
+      {
+        "name": "image_url",
+        "label": "Image URL",
+        "type": "url"
+      },
+      {
+        "name": "width",
+        "label": "Width",
+        "type": "uinteger"
+      },
+      {
+        "name": "height",
+        "label": "Height",
+        "type": "uinteger"
+      }
+    ]
+  },
+  {
+    "name": "credits_used",
+    "label": "Credits used",
+    "type": "uinteger"
+  },
+  {
+    "name": "credits_left",
+    "label": "Credits left",
+    "type": "uinteger"
+  }
+]

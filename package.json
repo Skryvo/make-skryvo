@@ -1,0 +1,11 @@
+{
+  "name": "make-skryvo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Skryvo's custom app for Make, as JSON component files.",
+  "license": "MIT",
+  "author": "Flutter Studio LLC <support@skryvo.ai>",
+  "scripts": {
+    "test": "node --test test/app.test.mjs"
+  }
+}

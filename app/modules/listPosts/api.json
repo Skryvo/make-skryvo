@@ -1,0 +1,12 @@
+{
+  "url": "/posts",
+  "method": "GET",
+  "qs": {
+    "days": "{{parameters.days}}"
+  },
+  "response": {
+    "iterate": "{{body.posts}}",
+    "output": "{{item}}",
+    "limit": "{{parameters.limit}}"
+  }
+}

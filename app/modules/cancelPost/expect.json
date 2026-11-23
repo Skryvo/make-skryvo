@@ -1,0 +1,8 @@
+[
+  {
+    "name": "post_id",
+    "type": "text",
+    "label": "Post ID",
+    "required": true
+  }
+]

@@ -1,0 +1,85 @@
+[
+  {
+    "name": "topic",
+    "type": "text",
+    "label": "Topic",
+    "required": true,
+    "help": "What the article is about, 3 to 200 characters."
+  },
+  {
+    "name": "brand_id",
+    "type": "select",
+    "label": "Brand",
+    "options": "rpc://listBrands",
+    "help": "The brand to write as. Left empty, the account's default brand."
+  },
+  {
+    "name": "length",
+    "label": "Length",
+    "type": "uinteger",
+    "help": "Words, 100 to 4000."
+  },
+  {
+    "name": "tone",
+    "type": "text",
+    "label": "Tone"
+  },
+  {
+    "name": "style",
+    "type": "text",
+    "label": "Style",
+    "help": "For example how-to, listicle, comparison, case study or explainer."
+  },
+  {
+    "name": "language",
+    "type": "text",
+    "label": "Language",
+    "help": "A language code such as en or de."
+  },
+  {
+    "name": "audience",
+    "type": "text",
+    "label": "Audience"
+  },
+  {
+    "name": "keywords",
+    "label": "Keywords",
+    "type": "array",
+    "spec": {
+      "type": "text",
+      "label": "Keyword"
+    }
+  },
+  {
+    "name": "must_cover",
+    "label": "Must cover",
+    "type": "array",
+    "spec": {
+      "type": "text",
+      "label": "Point"
+    }
+  },
+  {
+    "name": "only_you",
+    "type": "text",
+    "label": "Only you know",
+    "help": "Facts only the person knows, used in their words.",
+    "multiline": true
+  },
+  {
+    "name": "notes",
+    "type": "text",
+    "label": "Notes",
+    "multiline": true
+  },
+  {
+    "name": "sources",
+    "label": "Sources",
+    "type": "array",
+    "spec": {
+      "type": "url",
+      "label": "Page"
+    },
+    "help": "Up to three public pages to read."
+  }
+]

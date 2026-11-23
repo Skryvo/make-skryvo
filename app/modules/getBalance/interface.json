@@ -1,0 +1,29 @@
+[
+  {
+    "name": "plan",
+    "label": "Plan",
+    "type": "text"
+  },
+  {
+    "name": "left",
+    "label": "Left",
+    "type": "collection",
+    "spec": [
+      {
+        "name": "generations",
+        "label": "Generations",
+        "type": "any"
+      },
+      {
+        "name": "image_credits",
+        "label": "Image credits",
+        "type": "any"
+      }
+    ]
+  },
+  {
+    "name": "article_plans_left",
+    "label": "Article plans left",
+    "type": "any"
+  }
+]

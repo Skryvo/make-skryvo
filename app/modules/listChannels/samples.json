@@ -1,0 +1,32 @@
+{
+  "id": "conn_8f2e1a",
+  "platform": "linkedin",
+  "name": "Northside Coffee",
+  "brand_ids": [
+    "bv_3c9d0e"
+  ],
+  "kind": "social",
+  "needs_reconnect": false,
+  "can": {
+    "takes": "posts",
+    "words": 3000,
+    "title": null,
+    "media_required": "none",
+    "pictures": true,
+    "video": {
+      "most_bytes": 524288000,
+      "shortest_seconds": 3,
+      "longest_seconds": 1800
+    },
+    "thread_posts": 1,
+    "poll": true,
+    "comments": true,
+    "link": "in the words",
+    "options": {
+      "as_document": {
+        "type": "boolean"
+      }
+    },
+    "must_choose": []
+  }
+}

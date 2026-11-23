@@ -1,0 +1,17 @@
+[
+  {
+    "name": "article_id",
+    "label": "Article ID",
+    "type": "text"
+  },
+  {
+    "name": "status",
+    "label": "Status",
+    "type": "text"
+  },
+  {
+    "name": "minutes",
+    "label": "Minutes",
+    "type": "uinteger"
+  }
+]

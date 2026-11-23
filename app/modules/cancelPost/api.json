@@ -1,0 +1,9 @@
+{
+  "url": "/posts/{{parameters.post_id}}",
+  "method": "DELETE",
+  "response": {
+    "output": {
+      "cancelled": "{{parameters.post_id}}"
+    }
+  }
+}

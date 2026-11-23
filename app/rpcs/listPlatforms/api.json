@@ -1,0 +1,15 @@
+{
+  "url": "/platforms",
+  "method": "GET",
+  "response": {
+    "limit": 500,
+    "iterate": {
+      "container": "{{body.platforms}}",
+      "condition": "{{item.kind = \"social\"}}"
+    },
+    "output": {
+      "label": "{{item.name}}",
+      "value": "{{item.platform}}"
+    }
+  }
+}

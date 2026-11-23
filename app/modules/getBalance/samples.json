@@ -1,0 +1,16 @@
+{
+  "plan": "pro",
+  "access": "active",
+  "trial_ends_at": null,
+  "left": {
+    "generations": 41,
+    "image_credits": 180,
+    "resets_at": "2026-12-01T00:00:00+00:00"
+  },
+  "article_plans_left": 18,
+  "enough_for": {
+    "articles": 13,
+    "post_batches": 41,
+    "post_pictures": 45
+  }
+}

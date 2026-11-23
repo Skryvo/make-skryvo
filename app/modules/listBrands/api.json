@@ -1,0 +1,9 @@
+{
+  "url": "/brands",
+  "method": "GET",
+  "response": {
+    "iterate": "{{body.brands}}",
+    "output": "{{item}}",
+    "limit": "{{parameters.limit}}"
+  }
+}

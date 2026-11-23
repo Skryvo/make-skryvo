@@ -1,0 +1,50 @@
+[
+  {
+    "label": "Posts",
+    "modules": [
+      "writePost",
+      "designPicture",
+      "schedulePost",
+      "updatePost",
+      "cancelPost",
+      "listPosts"
+    ]
+  },
+  {
+    "label": "Articles",
+    "modules": [
+      "planArticle",
+      "writeArticle",
+      "getArticle",
+      "publishArticle"
+    ]
+  },
+  {
+    "label": "Writing",
+    "modules": [
+      "writeEmail",
+      "writeListing",
+      "searchContent"
+    ]
+  },
+  {
+    "label": "Account",
+    "modules": [
+      "getBalance",
+      "listChannels",
+      "listBrands"
+    ]
+  },
+  {
+    "label": "Events",
+    "modules": [
+      "watchEvents"
+    ]
+  },
+  {
+    "label": "Other",
+    "modules": [
+      "makeApiCall"
+    ]
+  }
+]

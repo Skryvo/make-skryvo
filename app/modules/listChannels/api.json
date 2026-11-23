@@ -1,0 +1,9 @@
+{
+  "url": "/channels",
+  "method": "GET",
+  "response": {
+    "iterate": "{{body.channels}}",
+    "output": "{{item}}",
+    "limit": "{{parameters.limit}}"
+  }
+}

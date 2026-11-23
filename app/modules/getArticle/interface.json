@@ -1,0 +1,47 @@
+[
+  {
+    "name": "article_id",
+    "label": "Article ID",
+    "type": "text"
+  },
+  {
+    "name": "status",
+    "label": "Status",
+    "type": "text"
+  },
+  {
+    "name": "stage",
+    "label": "Stage",
+    "type": "text"
+  },
+  {
+    "name": "error",
+    "label": "Error",
+    "type": "text"
+  },
+  {
+    "name": "title",
+    "label": "Title",
+    "type": "text"
+  },
+  {
+    "name": "words",
+    "label": "Words",
+    "type": "uinteger"
+  },
+  {
+    "name": "score",
+    "label": "Score",
+    "type": "uinteger"
+  },
+  {
+    "name": "markdown",
+    "label": "Markdown",
+    "type": "text"
+  },
+  {
+    "name": "open_in_skryvo",
+    "label": "Open in Skryvo",
+    "type": "url"
+  }
+]

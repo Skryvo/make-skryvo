@@ -1,0 +1,32 @@
+[
+  {
+    "name": "id",
+    "label": "Channel ID",
+    "type": "text"
+  },
+  {
+    "name": "platform",
+    "label": "Platform",
+    "type": "text"
+  },
+  {
+    "name": "name",
+    "label": "Name",
+    "type": "text"
+  },
+  {
+    "name": "kind",
+    "label": "Kind",
+    "type": "text"
+  },
+  {
+    "name": "needs_reconnect",
+    "label": "Needs reconnect",
+    "type": "boolean"
+  },
+  {
+    "name": "can",
+    "label": "Can",
+    "type": "any"
+  }
+]

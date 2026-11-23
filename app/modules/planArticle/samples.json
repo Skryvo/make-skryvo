@@ -1,0 +1,68 @@
+{
+  "status": "confirm",
+  "plan_id": "pl_91ab3e",
+  "brand_id": "bv_3c9d0e",
+  "headline": "How to choose a coffee grinder for home",
+  "other_headlines": [
+    "Burr or blade: picking a home grinder"
+  ],
+  "search_phrase": "best coffee grinder for home",
+  "search": {
+    "phrase": "best coffee grinder for home",
+    "monthly_searches": 5400,
+    "difficulty": 31,
+    "intent": "commercial",
+    "market": "GB",
+    "winnable": "Small sites hold three of the first five results.",
+    "ideas": []
+  },
+  "keywords": [
+    "best coffee grinder for home"
+  ],
+  "angle": "A barista's checklist for first-time buyers",
+  "outline": [
+    {
+      "heading": "Burr or blade?",
+      "covers": "Why the grind decides taste"
+    }
+  ],
+  "questions": [
+    "Which grinder do you use behind your own counter?"
+  ],
+  "already_written": [],
+  "sources": [
+    {
+      "title": "Grind size guide",
+      "url": "https://example.org/grind"
+    }
+  ],
+  "facts": [
+    {
+      "fact": "Burr grinders give a more even grind.",
+      "source": "Example Org",
+      "url": "https://example.org/grind"
+    }
+  ],
+  "other_search_phrases": [
+    "coffee grinder buying guide"
+  ],
+  "settings": [
+    {
+      "field": "word_count",
+      "value": 1500,
+      "from": "brand"
+    }
+  ],
+  "cost": {
+    "generations": 2,
+    "image_credits_up_to": 16
+  },
+  "left": {
+    "generations": 41,
+    "image_credits": 180,
+    "resets_at": "2026-12-01T00:00:00+00:00"
+  },
+  "differs_from_brand": [],
+  "plans_left": 17,
+  "expires_at": "2026-11-30T12:00:00+00:00"
+}

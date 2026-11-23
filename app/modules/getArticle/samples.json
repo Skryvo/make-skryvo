@@ -1,0 +1,28 @@
+{
+  "article_id": "pl_91ab3e",
+  "status": "done",
+  "generation_id": "gen_a7c2f0",
+  "title": "How to choose a coffee grinder for home",
+  "words": 1512,
+  "score": 88,
+  "markdown": "# How to choose a coffee grinder for home\n\n…",
+  "complete": true,
+  "claims": {
+    "checked": 9,
+    "verified": 9,
+    "by_verdict": {
+      "verified": 9
+    },
+    "items": [
+      {
+        "claim": "Burr grinders give a more even grind.",
+        "verdict": "verified",
+        "why": "Two sources measure the spread of particle sizes.",
+        "sources": [
+          "https://example.org/grind"
+        ]
+      }
+    ]
+  },
+  "open_in_skryvo": "https://app.skryvo.ai/generate/blog/gen_a7c2f0"
+}

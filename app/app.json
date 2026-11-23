@@ -1,0 +1,169 @@
+{
+  "name": "skryvo",
+  "label": "Skryvo",
+  "description": "Write posts, articles, emails and listings in a brand's voice, design their pictures, and schedule them to connected channels once approved.",
+  "theme": "#2563EB",
+  "language": "en",
+  "connection": {
+    "name": "skryvo",
+    "type": "basic",
+    "label": "Skryvo"
+  },
+  "webhook": {
+    "name": "skryvoEvents",
+    "type": "web",
+    "label": "Skryvo events",
+    "connection": "skryvo"
+  },
+  "rpcs": [
+    {
+      "name": "listBrands",
+      "label": "List brands",
+      "connection": "skryvo"
+    },
+    {
+      "name": "listSocialChannels",
+      "label": "List social channels",
+      "connection": "skryvo"
+    },
+    {
+      "name": "listBlogs",
+      "label": "List blogs",
+      "connection": "skryvo"
+    },
+    {
+      "name": "listPlatforms",
+      "label": "List platforms",
+      "connection": "skryvo"
+    }
+  ],
+  "modules": [
+    {
+      "name": "writePost",
+      "typeId": 4,
+      "label": "Write a post",
+      "description": "Drafts a post per platform in the brand's voice. Schedules nothing.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "designPicture",
+      "typeId": 4,
+      "label": "Design a picture",
+      "description": "Designs one picture for a post in the brand's kept look, sized for each platform. Uses image credits.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "schedulePost",
+      "typeId": 4,
+      "label": "Schedule a post",
+      "description": "Schedules approved text to connected channels. Use it only after the person approved the words.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "updatePost",
+      "typeId": 4,
+      "label": "Update a post",
+      "description": "Moves a post that has not gone out to a new time, changes its words, or both.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "cancelPost",
+      "typeId": 4,
+      "label": "Cancel a post",
+      "description": "Cancels a scheduled post before it goes out.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "listPosts",
+      "typeId": 9,
+      "label": "List scheduled posts",
+      "description": "Returns scheduled and recent posts with their status.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "planArticle",
+      "typeId": 4,
+      "label": "Plan an article",
+      "description": "Plans an article for free: headline, outline, search phrase and the questions only the person can answer.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "writeArticle",
+      "typeId": 4,
+      "label": "Write an article",
+      "description": "Starts writing a planned article (2 generations). Watch events with Article ready, or Get an article, for the result.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "getArticle",
+      "typeId": 4,
+      "label": "Get an article",
+      "description": "Returns an article's status: writing with its stage, done with its text and checked claims, or failed.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "publishArticle",
+      "typeId": 4,
+      "label": "Publish an article",
+      "description": "Schedules a finished article to a connected blog, or sends it there now as a draft to review.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "writeEmail",
+      "typeId": 4,
+      "label": "Write an email",
+      "description": "Writes subject lines, a preheader, the body and a call to action in the brand's voice. Nothing is sent.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "writeListing",
+      "typeId": 4,
+      "label": "Write a product listing",
+      "description": "Writes a title, description and feature bullets for a marketplace from one to ten features.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "getBalance",
+      "typeId": 4,
+      "label": "Get the balance",
+      "description": "Returns the generations, image credits and article plans left this month.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "listChannels",
+      "typeId": 9,
+      "label": "List channels",
+      "description": "Returns the connected channels and what each one takes.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "listBrands",
+      "typeId": 9,
+      "label": "List brands",
+      "description": "Returns the brands this key can use.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "searchContent",
+      "typeId": 9,
+      "label": "Search content",
+      "description": "Returns earlier articles, posts, emails, listings or ads, newest first.",
+      "connection": "skryvo"
+    },
+    {
+      "name": "watchEvents",
+      "typeId": 10,
+      "label": "Watch events",
+      "description": "Triggers when a post is published or fails, an article is ready or fails, or a post's results come in.",
+      "connection": "skryvo",
+      "webhook": "skryvoEvents"
+    },
+    {
+      "name": "makeApiCall",
+      "typeId": 12,
+      "label": "Make an API call",
+      "description": "Performs an authorized call to any route of Skryvo's agent API.",
+      "connection": "skryvo"
+    }
+  ]
+}

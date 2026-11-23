@@ -1,0 +1,61 @@
+[
+  {
+    "name": "plan_id",
+    "type": "text",
+    "label": "Plan ID",
+    "required": true,
+    "help": "From Plan an article."
+  },
+  {
+    "name": "answers",
+    "label": "Answers",
+    "type": "array",
+    "spec": [
+      {
+        "name": "question",
+        "type": "text",
+        "label": "Question",
+        "required": true
+      },
+      {
+        "name": "answer",
+        "type": "text",
+        "label": "Answer",
+        "required": true
+      }
+    ],
+    "help": "The person's answers to the plan's questions, up to three."
+  },
+  {
+    "name": "headline",
+    "type": "text",
+    "label": "Headline"
+  },
+  {
+    "name": "notes",
+    "type": "text",
+    "label": "Notes",
+    "multiline": true
+  },
+  {
+    "name": "pictures",
+    "label": "Cover picture",
+    "type": "boolean"
+  },
+  {
+    "name": "inside_pictures",
+    "label": "Inside pictures",
+    "type": "uinteger",
+    "help": "0 to 3."
+  },
+  {
+    "name": "tone",
+    "type": "text",
+    "label": "Tone"
+  },
+  {
+    "name": "audience",
+    "type": "text",
+    "label": "Audience"
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "name": "article_id",
+    "type": "text",
+    "label": "Article ID",
+    "required": true
+  }
+]

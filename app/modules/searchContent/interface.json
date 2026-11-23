@@ -1,0 +1,22 @@
+[
+  {
+    "name": "id",
+    "label": "ID",
+    "type": "text"
+  },
+  {
+    "name": "kind",
+    "label": "Kind",
+    "type": "text"
+  },
+  {
+    "name": "title",
+    "label": "Title",
+    "type": "text"
+  },
+  {
+    "name": "created_at",
+    "label": "Created",
+    "type": "date"
+  }
+]

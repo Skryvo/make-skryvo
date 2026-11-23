@@ -1,0 +1,18 @@
+{
+  "id": "c1a2b3c4d5",
+  "platform": "linkedin",
+  "channel_id": "conn_8f2e1a",
+  "date": "2026-11-24",
+  "time": "10:15",
+  "status": "scheduled",
+  "reason": null,
+  "awaiting_approval": false,
+  "reviewer_approval": null,
+  "auto_publish": true,
+  "text": "We just opened our new studio in Leeds. Come say hello this Saturday.",
+  "topic": "New studio opening",
+  "written": true,
+  "publish_error": null,
+  "posted_url": null,
+  "open_in_skryvo": "https://app.skryvo.ai/calendar?date=2026-11-24"
+}

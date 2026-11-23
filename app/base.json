@@ -1,0 +1,35 @@
+{
+  "baseUrl": "https://api.skryvo.ai/api/v1/agent",
+  "headers": {
+    "Authorization": "Bearer {{connection.apiKey}}",
+    "Accept": "application/json"
+  },
+  "timeout": "{{common.timeout}}",
+  "response": {
+    "error": {
+      "message": "[{{statusCode}}] {{ifempty(body.detail; body.message)}}",
+      "type": "RuntimeError",
+      "401": {
+        "message": "{{ifempty(body.detail; body.message)}} Create a new key in Skryvo under Settings › API & agents.",
+        "type": "InvalidAccessTokenError"
+      },
+      "403": {
+        "message": "{{ifempty(body.detail; body.message)}}",
+        "type": "InvalidAccessTokenError"
+      },
+      "422": {
+        "message": "{{ifempty(body.detail; body.message)}}",
+        "type": "DataError"
+      },
+      "429": {
+        "message": "{{body.message}}",
+        "type": "RateLimitError"
+      }
+    }
+  },
+  "log": {
+    "sanitize": [
+      "request.headers.authorization"
+    ]
+  }
+}

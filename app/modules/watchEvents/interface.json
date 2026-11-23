@@ -1,0 +1,27 @@
+[
+  {
+    "name": "id",
+    "label": "Event ID",
+    "type": "text"
+  },
+  {
+    "name": "type",
+    "label": "Event",
+    "type": "text"
+  },
+  {
+    "name": "created",
+    "label": "Created",
+    "type": "date"
+  },
+  {
+    "name": "test",
+    "label": "Test delivery",
+    "type": "boolean"
+  },
+  {
+    "name": "data",
+    "label": "Data",
+    "type": "any"
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "name": "post_id",
+    "type": "text",
+    "label": "Post ID",
+    "required": true
+  },
+  {
+    "name": "at",
+    "label": "New time",
+    "type": "date"
+  },
+  {
+    "name": "text",
+    "type": "text",
+    "label": "New text",
+    "multiline": true
+  }
+]

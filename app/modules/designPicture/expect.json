@@ -1,0 +1,37 @@
+[
+  {
+    "name": "text",
+    "type": "text",
+    "label": "Text",
+    "required": true,
+    "help": "The post's text; the picture carries its opening line.",
+    "multiline": true
+  },
+  {
+    "name": "platforms",
+    "type": "select",
+    "label": "Platforms",
+    "multiple": true,
+    "options": "rpc://listPlatforms",
+    "required": true
+  },
+  {
+    "name": "brand_id",
+    "type": "select",
+    "label": "Brand",
+    "options": "rpc://listBrands",
+    "help": "The brand to write as. Left empty, the account's default brand."
+  },
+  {
+    "name": "headline",
+    "type": "text",
+    "label": "Headline",
+    "help": "Up to nine words on the picture, in place of the opening line."
+  },
+  {
+    "name": "direction",
+    "type": "text",
+    "label": "Direction",
+    "help": "closer, bolder, calmer, or the person's own words."
+  }
+]

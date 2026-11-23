@@ -1,0 +1,8 @@
+{
+  "url": "/articles/{{parameters.article_id}}/publish",
+  "method": "POST",
+  "body": "{{omit(parameters; \"article_id\")}}",
+  "response": {
+    "output": "{{body.post}}"
+  }
+}

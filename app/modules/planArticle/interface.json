@@ -1,0 +1,72 @@
+[
+  {
+    "name": "plan_id",
+    "label": "Plan ID",
+    "type": "text"
+  },
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text"
+  },
+  {
+    "name": "other_headlines",
+    "label": "Other headlines",
+    "type": "array",
+    "spec": {
+      "type": "text"
+    }
+  },
+  {
+    "name": "search_phrase",
+    "label": "Search phrase",
+    "type": "text"
+  },
+  {
+    "name": "outline",
+    "label": "Outline",
+    "type": "array",
+    "spec": [
+      {
+        "name": "heading",
+        "label": "Heading",
+        "type": "text"
+      },
+      {
+        "name": "covers",
+        "label": "Covers",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "name": "questions",
+    "label": "Questions",
+    "type": "array",
+    "spec": {
+      "type": "text"
+    }
+  },
+  {
+    "name": "settings",
+    "label": "Settings",
+    "type": "array",
+    "spec": [
+      {
+        "name": "field",
+        "label": "Field",
+        "type": "text"
+      },
+      {
+        "name": "value",
+        "label": "Value",
+        "type": "any"
+      },
+      {
+        "name": "from",
+        "label": "From",
+        "type": "text"
+      }
+    ]
+  }
+]

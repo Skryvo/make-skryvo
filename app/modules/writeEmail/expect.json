@@ -1,0 +1,79 @@
+[
+  {
+    "name": "about",
+    "type": "text",
+    "label": "About",
+    "required": true,
+    "help": "What the email is about.",
+    "multiline": true
+  },
+  {
+    "name": "email_type",
+    "type": "select",
+    "label": "Email type",
+    "required": true,
+    "options": [
+      {
+        "label": "Announcement",
+        "value": "announcement"
+      },
+      {
+        "label": "Follow-up",
+        "value": "follow_up"
+      },
+      {
+        "label": "Newsletter",
+        "value": "newsletter"
+      },
+      {
+        "label": "Promotional",
+        "value": "promotional"
+      },
+      {
+        "label": "Re-engagement",
+        "value": "re_engagement"
+      },
+      {
+        "label": "Transactional",
+        "value": "transactional"
+      },
+      {
+        "label": "Welcome",
+        "value": "welcome"
+      }
+    ]
+  },
+  {
+    "name": "brand_id",
+    "type": "select",
+    "label": "Brand",
+    "options": "rpc://listBrands",
+    "help": "The brand to write as. Left empty, the account's default brand."
+  },
+  {
+    "name": "tone",
+    "type": "text",
+    "label": "Tone"
+  },
+  {
+    "name": "language",
+    "type": "text",
+    "label": "Language"
+  },
+  {
+    "name": "audience",
+    "type": "text",
+    "label": "Audience"
+  },
+  {
+    "name": "call_to_action",
+    "type": "text",
+    "label": "Call to action"
+  },
+  {
+    "name": "length",
+    "label": "Length",
+    "type": "uinteger",
+    "help": "Body words, 100 to 1000."
+  }
+]

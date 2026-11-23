@@ -1,0 +1,42 @@
+{
+  "status": "written",
+  "topic": "Our new studio opens Saturday",
+  "brand_id": "bv_3c9d0e",
+  "generation_id": "gen_5d1c9a",
+  "posts": [
+    {
+      "platform": "linkedin",
+      "text": "Our new studio opens this Saturday in Leeds. #coffee",
+      "hashtags": [
+        "coffee"
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "field": "platforms",
+      "value": [
+        "linkedin",
+        "x"
+      ],
+      "from": "brand"
+    },
+    {
+      "field": "tone",
+      "value": "friendly",
+      "from": "you"
+    },
+    {
+      "field": "pictures",
+      "value": true,
+      "from": "Skryvo default"
+    }
+  ],
+  "differs_from_brand": [
+    {
+      "field": "tone",
+      "value": "friendly",
+      "brand_default": "professional"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "events",
+    "type": "select",
+    "label": "Events",
+    "multiple": true,
+    "required": true,
+    "options": [
+      {
+        "label": "Post published",
+        "value": "post.published"
+      },
+      {
+        "label": "Post failed",
+        "value": "post.failed"
+      },
+      {
+        "label": "Article ready",
+        "value": "article.ready"
+      },
+      {
+        "label": "Article failed",
+        "value": "article.failed"
+      },
+      {
+        "label": "Results ready",
+        "value": "results.ready"
+      }
+    ],
+    "help": "Skryvo sends each of these to this scenario as it happens."
+  }
+]

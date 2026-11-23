@@ -1,0 +1,17 @@
+[
+  {
+    "name": "title",
+    "label": "Title",
+    "type": "text"
+  },
+  {
+    "name": "listing",
+    "label": "Listing",
+    "type": "any"
+  },
+  {
+    "name": "generation_id",
+    "label": "Generation ID",
+    "type": "text"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "url": "/posts",
+  "method": "POST",
+  "body": "{{parameters}}",
+  "response": {
+    "iterate": "{{body.posts}}",
+    "output": "{{item}}"
+  }
+}

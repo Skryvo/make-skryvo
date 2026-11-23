@@ -1,0 +1,6 @@
+{
+  "url": "/emails",
+  "method": "POST",
+  "body": "{{parameters}}",
+  "response": {}
+}

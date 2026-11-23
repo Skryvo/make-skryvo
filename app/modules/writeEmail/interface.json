@@ -1,0 +1,30 @@
+[
+  {
+    "name": "subject_lines",
+    "label": "Subject lines",
+    "type": "array",
+    "spec": {
+      "type": "text"
+    }
+  },
+  {
+    "name": "preheader",
+    "label": "Preheader",
+    "type": "text"
+  },
+  {
+    "name": "body",
+    "label": "Body",
+    "type": "text"
+  },
+  {
+    "name": "call_to_action",
+    "label": "Call to action",
+    "type": "text"
+  },
+  {
+    "name": "generation_id",
+    "label": "Generation ID",
+    "type": "text"
+  }
+]
