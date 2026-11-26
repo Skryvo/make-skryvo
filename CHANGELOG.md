@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.1
+## 1.0.1 (approved by Make, 25 Nov 2026)
 
 - Make an API call stays on `https://api.skryvo.ai/api/`, takes headers, and merges its query string and headers
   into the base request.

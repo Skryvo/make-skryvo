@@ -8,7 +8,9 @@ publishes or fails, an article is ready or a post's results come in.
 [Skryvo](https://skryvo.ai) is a hosted AI content platform, a paid service with a 7-day free trial on Hobby and
 Pro (https://skryvo.ai/pricing/). Docs: https://skryvo.ai/docs/
 
-The app is not yet published in Make; `SUBMIT.md` lists the steps to load and submit it.
+The app is public in every Make zone (approved 25 Nov 2026): add it to a scenario by searching for Skryvo, or see
+https://www.make.com/en/integrations/skryvo. `SUBMIT.md` records how it was loaded and submitted; changes to the
+approved app go through Make's approval of changes.
 
 ## Connect
 
